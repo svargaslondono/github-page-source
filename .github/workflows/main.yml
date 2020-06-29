@@ -37,4 +37,4 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Build created at ${{ steps.date.outputs.date }}"
-        git push https://github.com/svargaslondono/svargaslondono.github.io.git master
+        git push https://github.com/svargaslondono/svargaslondono.github.io.git HEAD:master
