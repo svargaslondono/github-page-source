@@ -42,5 +42,5 @@ jobs:
     - name: Push to site repo
       uses: ad-m/github-push-action@master
       with:
-        repository: 'svargaslondono.github.io'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        repository: 'svargaslondono/svargaslondono.github.io.git'
+        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
