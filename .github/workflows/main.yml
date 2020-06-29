@@ -24,20 +24,14 @@ jobs:
       run: |
         npm install
         npm run build
-
-    # Returns the current date
-    - name: Get current date
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
-
-    # Creates a commit with the built changes
-    - name: Commit build
-      run: |
-        git add build/*
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Build created at ${{ steps.date.outputs.date }}"
         
-    # Pushes commit to site repository
-    - name: Push to site repo
-      run: git push https://svargaslondono:${{ secrets.PERSONAL_TOKEN }}@github.com/svargaslondono/svargaslondono.github.io.git HEAD:master
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.1.0
+      with:
+        target_branch: master
+        build_dir: build
+        repo: svargaslondono/svargaslondono.github.io
+        keep_history: true
+        jekyll: false
+      env: 
+        GH_PAT: ${{ secrets.GH_PAT }}
