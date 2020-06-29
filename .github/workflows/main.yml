@@ -30,11 +30,17 @@ jobs:
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%dT%H:%M:%S')"
 
-    # Creates a commit with the built changes and pushes it to the site repository
-    - name: Run a multi-line script
+    # Creates a commit with the built changes
+    - name: Commit build
       run: |
-        git add build/
+        git add build/*
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "Build created at ${{ steps.date.outputs.date }}"
-        git push https://github.com/svargaslondono/svargaslondono.github.io.git HEAD:master
+        
+    # Uses external action to push to site repository
+    - name: Push to site repo
+      uses: ad-m/github-push-action@master
+      with:
+        repository: 'svargaslondono.github.io'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
