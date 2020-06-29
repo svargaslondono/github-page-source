@@ -40,4 +40,4 @@ jobs:
         
     # Pushes commit to site repository
     - name: Push to site repo
-      run: push https://svargaslondono:${{ secrets.PERSONAL_TOKEN }}@github.com/svargaslondono/svargaslondono.github.io.git HEAD:master
+      run: git push https://svargaslondono:${{ secrets.PERSONAL_TOKEN }}@github.com/svargaslondono/svargaslondono.github.io.git HEAD:master
