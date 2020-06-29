@@ -38,9 +38,6 @@ jobs:
         git config --local user.name "GitHub Action"
         git commit -m "Build created at ${{ steps.date.outputs.date }}"
         
-    # Uses external action to push to site repository
+    # Pushes commit to site repository
     - name: Push to site repo
-      uses: ad-m/github-push-action@master
-      with:
-        repository: 'svargaslondono/svargaslondono.github.io'
-        github_token: ${{ secrets.PERSONAL_TOKEN }}
+      run: push https://svargaslondono:${{ secrets.PERSONAL_TOKEN }}@github.com/svargaslondono/svargaslondono.github.io.git HEAD:master
