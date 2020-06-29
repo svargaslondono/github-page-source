@@ -20,8 +20,10 @@ jobs:
     - uses: actions/checkout@v2
 
     # Builds the site
-    - name: Run a one-line script
-      run: npm run build
+    - name: Build site
+      run: |
+        npm install
+        npm run build
 
     # Returns the current date
     - name: Get current date
