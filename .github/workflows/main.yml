@@ -5,7 +5,7 @@ name: Deploy to pages repository
 # Triggers the workflow on push events for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,22 +16,22 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-    # Builds the site
-    - name: Build site
-      run: |
-        npm install
-        npm run build
-        
-    - name: GitHub Pages
-      uses: crazy-max/ghaction-github-pages@v2.1.0
-      with:
-        target_branch: master
-        build_dir: build
-        repo: svargaslondono/svargaslondono.github.io
-        keep_history: true
-        jekyll: false
-      env: 
-        GH_PAT: ${{ secrets.GH_PAT }}
+      # Builds the site
+      - name: Build site
+        run: |
+          npm install
+          npm run build
+
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: master
+          build_dir: build
+          repo: svargaslondono/svargaslondono.github.io
+          keep_history: true
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
