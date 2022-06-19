@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 60">
+  <path d="M 0 0 V 40 H 8 L 31 0 H 22 L 8 24 V 0 Z"/>
+  <path d="M 13 40 H 22 L 36 16 V 40 H 44 V 0 H 36 Z"/>
+  <path d="M 48 0 V 40 H 88 V 32 H 56 V 0 H 46 Z"/>
+  <path d="M 60 0 V 28 H 88 V 0 Z M 68 8 H 80 V 20 H 68 Z"/>
+  <path d="M 0 44 V 60 H 16 V 52 H 8 V 44 Z"/>
+  <path d="M 20 44 V 60 H 28 V 52 H 44 V 60 H 52 V 44 Z"/>
+  <path d="M 56 44 V 60 H 64 V 44 Z"/>
+  <path d="M 68 44 V 60 H 76 V 44 Z"/>
+  <path d="M 80 44 V 60 H 88 V 44 Z"/>
+</svg>

@@ -1,0 +1,16 @@
+.Navbar {
+  background-color: #222;
+  box-sizing: border-box;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  left: 0;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.Navbar__logo {
+  fill: white;
+}

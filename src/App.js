@@ -1,10 +1,12 @@
 import React from "react";
 import profilePic from "./prof-1.png";
+import NavBar from "./common/NavBar";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <h1 className="App-title">Hi! My name is Sebastian.</h1>
 
       <div className="App-description">
