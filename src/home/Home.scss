@@ -1,0 +1,42 @@
+.Home {
+  padding: 0 40px;
+  background-color: #282c34;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+
+  &__link {
+    color: #f19837;
+  }
+
+  &__logo {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+
+  &__description,
+  &__title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .Home {
+    padding: unset;
+
+    &__logo {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__description {
+      position: relative;
+      padding-left: 120px;
+    }
+  }
+}
