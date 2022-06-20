@@ -9,9 +9,9 @@
   position: fixed;
   top: 0;
   width: 100%;
-}
 
-.Navbar__logo {
-  fill: white;
-  height: 30px;
+  &__logo {
+    fill: white;
+    height: 30px;
+  }
 }

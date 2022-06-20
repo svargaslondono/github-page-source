@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as Logo } from "../base-logo.svg";
-import "./NavBar.css";
+import "./NavBar.scss";
 
 function Navbar() {
   return (

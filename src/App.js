@@ -1,20 +1,20 @@
 import React from "react";
 import profilePic from "./prof-1.png";
 import NavBar from "./common/NavBar";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1 className="App-title">Hi! My name is Sebastian.</h1>
+      <h1 className="App__title">Hi! My name is Sebastian.</h1>
 
-      <div className="App-description">
+      <div className="App__description">
         <p>I'm a web developer with a keen eye for detail.</p>
         <p>
           Check out my{" "}
           <a
-            className="App-link"
+            className="App__link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/svargaslondono/">
@@ -22,17 +22,17 @@ function App() {
           </a>{" "}
           and my{" "}
           <a
-            className="App-link"
+            className="App__link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/svargaslondono">
             GitHub repos
           </a>
         </p>
-        <img src={profilePic} className="App-logo" alt="logo" />
+        <img src={profilePic} className="App__logo" alt="logo" />
       </div>
 
-      <footer className="App-footer">
+      <footer className="App__footer">
         <em>
           {"\u27C1"} This site is under construction. A lot more love is being
           added. {"\u2665"}
