@@ -1,18 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 .App {
-  background-color: #282c34;
+  background-color: #222;
 }
 
 .App {
-  margin-top: -50px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 0 40px;
+  padding-top: 60px;
+
+  &__content {
+    padding: 0 40px;
+    background-color: #282c34;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
 
   &__link {
     color: #f19837;
@@ -26,14 +37,6 @@ body,
 
   &__description,
   &__title {
-    text-align: center;
-  }
-
-  &__footer {
-    bottom: 0;
-    font-size: 14px;
-    padding: 20px;
-    position: absolute;
     text-align: center;
   }
 }
