@@ -1,11 +1,15 @@
 import React from "react";
-import profilePic from "../prof-1.png";
-import "./Home.scss";
+import profilePic from "prof-1.png";
+import "home/Home.scss";
+
+import { useTranslation } from "react-i18next";
 
 function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className="Home">
-      <h1 className="Home__title">Hi! My name is Sebastian.</h1>
+      <h1 className="Home__title">{t("home.title")}</h1>
       <div className="Home__description">
         <p>I'm a web developer with a keen eye for detail.</p>
         <p>
