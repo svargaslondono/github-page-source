@@ -2,7 +2,7 @@ import React from "react";
 import profilePic from "prof-1.png";
 import "home/Home.scss";
 
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 function Home() {
   const { t } = useTranslation();
@@ -11,24 +11,27 @@ function Home() {
     <div className="Home">
       <h1 className="Home__title">{t("home.title")}</h1>
       <div className="Home__description">
-        <p>I'm a web developer with a keen eye for detail.</p>
+        <p>{t("home.description")}</p>
         <p>
-          Check out my{" "}
-          <a
-            className="Home__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/svargaslondono/">
-            LinkedIn profile
-          </a>{" "}
-          and my{" "}
-          <a
-            className="Home__link"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/svargaslondono">
-            GitHub repos
-          </a>
+          <Trans
+            i18nKey="home.links"
+            components={[
+              <a
+                className="Home__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/svargaslondono/">
+                {" "}
+              </a>,
+              <a
+                className="Home__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/svargaslondono">
+                {" "}
+              </a>,
+            ]}
+          />
         </p>
         <img src={profilePic} className="Home__logo" alt="logo" />
       </div>

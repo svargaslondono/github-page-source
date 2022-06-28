@@ -15,7 +15,7 @@ function Navbar() {
     <header className="Navbar">
       <Logo className="Navbar__logo" />
       {Object.keys(languages)
-        .filter((key) => key !== i18n.language)
+        .filter((key) => key !== i18n.languages[0])
         .map((key) => (
           <button
             key={key}

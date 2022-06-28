@@ -1,5 +1,10 @@
 {
   "home": {
-    "title": "Hola! Mi nombre es Sebastian."
+    "title": "Hola! Mi nombre es Sebastian.",
+    "description": "Soy un desarrollador web enfocado en los detalles.",
+    "links": "Conoce mi <0>perfil</0> de LinkedIn y <1>repositorios</1> de GitHub."
+  },
+  "footer": {
+    "disclaimer": "This site is under construction. A lot more love is being added."
   }
 }
