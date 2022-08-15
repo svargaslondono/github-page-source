@@ -1,7 +1,9 @@
 {
+  "hero": {
+    "title": "Hi!<br/>My name<br/>is Sebastian."
+  },
   "home": {
-    "title": "Hi! My name is Sebastian.",
-    "description": "I'm a web developer with a keen eye for detail.",
+    "description": "I'm a developer with 6+ years of experience building websites. From e‑commerce sites to marketing landings, I've extracted the best from each experience, developing a keen eye for detail and a passion for web accessibility.",
     "links": "Check out my <0>LinkedIn profile</0> and my <1>GitHub repos</1>."
   },
   "footer": {

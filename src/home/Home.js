@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "prof-1.png";
+import Hero from "home/Hero";
 import "home/Home.scss";
 
 import { useTranslation, Trans } from "react-i18next";
@@ -9,8 +9,8 @@ function Home() {
 
   return (
     <div className="Home">
-      <h1 className="Home__title">{t("home.title")}</h1>
-      <div className="Home__description">
+      <Hero />
+      <div className="Home__content">
         <p>{t("home.description")}</p>
         <p>
           <Trans
@@ -33,7 +33,6 @@ function Home() {
             ]}
           />
         </p>
-        <img src={profilePic} className="Home__logo" alt="logo" />
       </div>
     </div>
   );

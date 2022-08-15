@@ -1,0 +1,79 @@
+.Hero {
+  border-bottom: 2px solid #fff;
+  position: relative;
+  margin: auto;
+  width: 100%;
+
+  &::before {
+    background-color: #fff;
+    top: 0;
+    content: '';
+    height: 80px;
+    left: 0;
+    position: absolute;
+    width: 10px;
+  }
+
+  &::after {
+    background-color: #fff;
+    top: 0;
+    content: '';
+    height: 10px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+  }
+
+  &__image {
+    background-color: #fff;
+    top: 20px;
+    height: 80px;
+    left: 20px;
+    position: absolute;
+    width: 80px;
+
+    &::before {
+      background-color: #282c34;
+      border: 10px solid #fff;
+      right: -20px;
+      content: '';
+      height: 40px;
+      bottom: -20px;
+      position: absolute;
+      width: 40px;
+    }
+
+    img {
+      filter: drop-shadow(2px 4px 6px #222);
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 20px;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .Hero {
+    &::before {
+      height: 120px;
+    }
+
+    &::after {
+      width: 120px;
+    }
+
+    &__image {
+      height: 120px;
+      width: 120px;
+    }
+  }
+}
